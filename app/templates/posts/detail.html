@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block main %}
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url({{ url_for('static', filename='assets/img/post-bg.jpg') }})">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-heading">
+                        <h1 class="text-break">{{ post.title }}</h1>
+                        <h2 class="subheading text-break">{{ " ".join(post.content.split(' ')[:10]).strip(',:-') }}</h2>
+                        <span class="meta text-break">
+                                Posted by
+                                <a href="#!">{{ post.author.name }}</a>
+                                on {{ post.published_date.strftime('%B %d, %Y') }}
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    {% for paragraph in post.content.split('\n') %}
+                        {% if paragraph.strip() %}
+                            <p>{{ paragraph }}</p>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </article>
+{% endblock %}
+

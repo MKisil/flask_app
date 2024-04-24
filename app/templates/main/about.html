@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block main %}
+    <header class="masthead" style="background-image: url({{ url_for('static', filename='assets/img/about-bg.jpg') }})">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="page-heading">
+                        <h1>About Me</h1>
+                        <span class="subheading">This is what I do.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content-->
+    <main class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <p class="lead">Hello! I'm a passionate and enthusiastic student dedicated to mastering the art of
+                        coding. Currently, I am deeply immersed in learning Python and JavaScript, two powerful and
+                        widely-used programming languages that have captured my interest due to their versatility and
+                        pivotal role in modern web development and data science.</p>
+                    <p>As I navigate through my academic journey, I am eager to apply my coding skills to solve
+                        real-world problems and build innovative software solutions. I am particularly fascinated by the
+                        ability of Python to simplify complex tasks and the dynamic functionality that JavaScript brings
+                        to web applications. These tools empower me to explore various aspects of programming, from
+                        backend logic with Python to interactive front-end designs with JavaScript.</p>
+                    <p>My goal is to continue refining my skills and to remain at the forefront of technology, where I
+                        can contribute to exciting projects and make a significant impact in the tech community. I am
+                        always open to collaborations and projects that challenge my abilities and push the boundaries
+                        of what I can achieve with code.</p>
+                    <p>Thank you for visiting my profile, and I look forward to the opportunities and adventures that
+                        coding will bring my way!</p>
+
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock main %}
