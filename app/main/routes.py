@@ -17,7 +17,7 @@ def index():
     else:
         posts = Post.query.options(joinedload(Post.author)).filter_by(is_draft=False).limit(10).all()
 
-    return render_template('main/index.html', posts=posts)
+    return render_template('main/index.html', posts=posts, full_list=full_list)
 
 
 @bp.route('/about/')
