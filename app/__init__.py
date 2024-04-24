@@ -1,8 +1,5 @@
 from flask import Flask
 from flask_login import LoginManager
-from slugify import slugify
-from sqlalchemy import event
-from werkzeug.security import generate_password_hash
 
 from app.extensions import db, admin, csrf
 from app.models.post import Post
