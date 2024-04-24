@@ -10,7 +10,6 @@ def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
 
-    # Initialize Flask extensions here
     db.init_app(app)
     admin.init_app(app)
     csrf.init_app(app)
@@ -18,7 +17,6 @@ def create_app(config_class=Config):
     login_manager.login_view = 'auth.login'
     login_manager.init_app(app)
 
-    # Register blueprints here
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
 
